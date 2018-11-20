@@ -76,7 +76,7 @@ npath: 40
 path_start: random
 
 # number of sims to run in parallel
-nbatch: 3
+nbatch: 2
 
 # NaN substitute value
 substitute: 1000000
