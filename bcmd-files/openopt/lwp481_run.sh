@@ -1,12 +1,12 @@
 #!/bin/bash
 
-DATASET="LWP475"
+DATASET="LWP481"
 OUTDIR=`readlink -m "../../data/openopt_results/${DATASET}"`
 JOBFILE="${DATASET}_hypothermia.optjob"
 DATAFILE="../../data/clean_hypothermia/${DATASET}_filtered_formatted.csv"
-echo "Writing to ${OUTDIR}"
+echo "Writing to ${OUTDIR}" 
 mkdir -p ${OUTDIR}
-python ~/repos/Github/BayesCMD/batch/optim.py -o ${OUTDIR} -b ~/repos/Github/BayesCMD/build ${JOBFILE}  ${DATAFILE} | tee | "${OUTDIR}/fitting_output.txt"
+python -u ~/repos/Github/BayesCMD/batch/optim.py -o ${OUTDIR} -b ~/repos/Github/BayesCMD/build ${JOBFILE}  ${DATAFILE} | tee "${OUTDIR}/fitting_output.txt"
 
 
 
