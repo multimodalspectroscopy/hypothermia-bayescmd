@@ -1,0 +1,35 @@
+{
+    "model_name": "bp_hypothermia",
+    "parameters": {
+        "r_t": 0.016335,
+        "Xtot_n": 3.500000,
+        "k_aut": 0.771883,
+        "Dpsi_n": 125.000000,
+        "r_m": 0.022203,
+        "P_an": 55.015963,
+        "Q_10": 5.085922,
+        "a_frac_n": 0.065078,
+        "temp_n": 34.846854,
+        "CMRO2_n": 0.024000,
+        "r_0": 0.011875,
+        "P_ic": 4.424372,
+        "r_n": 0.020724,
+        "phi": 0.029813,
+        "pH_on": 6.952645,
+        "NADpool": 4.499439,
+        "df": 0.747614
+    },
+    "inputs": [
+        "SaO2sup",
+        "temp",
+        "P_a"
+    ],
+    "targets": [
+        "HbO2",
+        "HHb",
+        "CCO",
+        "Hbdiff",
+        "HbT"
+    ],
+    "debug": false
+}
