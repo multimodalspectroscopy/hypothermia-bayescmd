@@ -46,7 +46,7 @@ param: Xtot_n, uniform, 3.5000, 8.0000, 5.4000
 # job details
 job_mode: GLP
 solver: pswarm
-max_iter: 6000
+max_iter: 5000
 distance: nrmse
 
 steady: 1000
