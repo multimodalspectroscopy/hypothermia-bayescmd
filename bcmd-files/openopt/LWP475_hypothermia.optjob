@@ -29,17 +29,16 @@ alias: t, t
 
 
 # parameter details
+param: Dpsi_n, uniform, 125.0000, 150.0000, 145.0000
 param: Q_10, uniform, 1.0000, 6.0000, 2.4000
-param: r_t, uniform, 0.0144, 0.0216, 0.0180
-param: pH_mn, uniform, 7.2000, 7.6000, 7.4000
+param: NADpool, uniform, 1.5000, 4.5000, 3.0000
+param: K_sigma, uniform, 8.0000, 12.0000, 10.0000
+param: k_aut, uniform, 0.0000, 1.0000, 1.0000
+param: cell_death, uniform, 0.0000, 1.0000, 0.0000
 param: r_0, uniform, 0.0101, 0.0151, 0.0126
-param: a_frac_n, uniform, 0.0000, 1.0000, 0.6700
-param: cytox_tot_tis, uniform, 0.0010, 0.0070, 0.0022
-param: df, uniform, 0.0000, 1.0000, 0.0000
-param: phi, uniform, 0.0288, 0.0432, 0.0360
-param: na, uniform, 3.8000, 5.0000, 4.3300
-param: O2_n, uniform, 0.0192, 0.0288, 0.0240
+param: pH_on, uniform, 6.8000, 7.2000, 7.0000
 param: Xtot_n, uniform, 3.5000, 8.0000, 5.4000
+
 
 
 
