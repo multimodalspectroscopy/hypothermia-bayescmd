@@ -4,4 +4,4 @@ CONFIG="/home/buck06191/repos/Github/hypothermia-bayescmd/config_files/single_ru
 
 echo ${DATAFILE}
 echo ${CONFIG}
-python "/home/buck06191/repos/Github/BayesCMD/scripts/single_run/run_model.py" --debug --workdir "/home/buck06191/repos/Github/hypothermia-bayescmd/data/openopt_results/${dataset}/fitting_run" ${DATAFILE} ${CONFIG}
+python "/home/buck06191/repos/Github/BayesCMD/scripts/single_run/run_model.py" --workdir "/home/buck06191/repos/Github/hypothermia-bayescmd/data/openopt_results/with_cellDeath/${DATASET}/fitting_run" ${DATAFILE} ${CONFIG}

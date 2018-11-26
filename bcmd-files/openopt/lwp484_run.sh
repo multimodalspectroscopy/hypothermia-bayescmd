@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DATASET="LWP484"
-OUTDIR=`readlink -m "../../data/openopt_results/${DATASET}"`
+OUTDIR=`readlink -m "../../data/openopt_results/with_cellDeath/${DATASET}"`
 JOBFILE="${DATASET}_hypothermia.optjob"
 DATAFILE="../../data/clean_hypothermia/${DATASET}_filtered_formatted.csv"
 echo "Writing to ${OUTDIR}" 

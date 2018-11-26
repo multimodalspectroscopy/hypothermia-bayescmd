@@ -7,7 +7,7 @@ _Py0n,uniform,0.08,0.12,0.1
 a_frac_n,uniform,0,1,0.67
 blood_frac,uniform,0.026,0.039,0.0325
 C_buffi,uniform,0.0176,0.0264,0.022
-C_buffic,uniform,0.02,0.03,0.025
+C_buffic,uniform,0.015,0.03,0.025
 c_frac,uniform,0.64,0.96,0.8
 C_im,uniform,0.0054,0.0081,0.00675
 C_v,uniform,0.0376,0.0564,0.047
@@ -19,7 +19,7 @@ CMRglucn,uniform,0.00352,0.00528,0.0044
 CMRO2_n,uniform,0.016,0.024,0.02
 CVinh,uniform,0.8,1.2,1
 cytox_tot_tis,uniform,0.001,0.007,0.0022
-Dp3_corr,uniform,-28,-20,-25
+Dp3_corr,uniform,-30,-20,-25
 dpH,uniform,8e-04,0.0012,0.001
 Dpsi_n,uniform,125,150,145
 E_a30,uniform,280,420,350
@@ -61,7 +61,7 @@ na,uniform,3.8,5,4.33
 NADcytn,uniform,318,400,359
 NADHcytn,uniform,32,68,50
 NADNADHratn,uniform,0.1,20,9
-NADpool,uniform,2.4,3.6,3
+NADpool,uniform,1.5,4.5,3
 O2_n,uniform,0.0192,0.0288,0.024
 P_a,uniform,30,80,50
 P_an,uniform,45,60,50
@@ -85,7 +85,7 @@ r_m,uniform,0.0216,0.0324,0.027
 r_n,uniform,0.01496,0.02244,0.0187
 r_t,uniform,0.0144,0.0216,0.018
 rocc,uniform,0,1,0
-SaO2_n,uniform,0.9,1,0.96
+SaO2_n,uniform,0.5,1,0.96
 SaO2sup,uniform,0.5,1,0.96
 sigma_coll,uniform,50.232,75.348,62.79
 sigma_e0,uniform,0.114,0.171,0.1425
@@ -97,5 +97,6 @@ VArat_n,uniform,2.4,3.6,3
 Vol_mit,uniform,0.0536,0.0804,0.067
 Vol_totn,uniform,0.8,1.2,1
 Xtot_n,uniform,3.5,8,5.4
-Q_10,uniform,1,3,2.4
+Q_10,uniform,1,6,2.4
 temp_n,uniform,30,40,37
+df,uniform,0,1,0
