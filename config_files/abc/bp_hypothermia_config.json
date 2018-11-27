@@ -72,11 +72,15 @@
         ],
         "insult_nadir": [
             "constant",
-            0
+            [
+                0
+            ]
         ],
         "death_transition": [
             "constant",
-            0
+            [
+                0
+            ]
         ]
     },
     "targets": [
