@@ -9,11 +9,12 @@
 module load python3/recommended
 cd $TMPDIR
 export BASEDIR="${HOME}/BayesCMD"
-printenv
-DATASET="LWP475"
-DATADIR=`readlink -m "${HOME}/hypothermia-bayescmd/data/clean_hypothermia/${DATASET}_filtered_formatted.csv"`
-CONFIGFILE=`readlink -m "./bp_hypothermia_config.json"`
 
+DATASET="LWP475"
+DATAFILE=`readlink -m "${HOME}/hypothermia-bayescmd/data/clean_hypothermia/${DATASET}_filtered_formatted.csv"`
+CONFIGFILE="./bp_hypothermia_config.json"
+
+echo "Datafile is ${DATFILE}\nConfig file is ${CONFIGFILE}."
 
 start=`date +%s`
 python3 $BASEDIR/scripts/batch.py 1000 $DATAFILE $CONFIGFILE --workdir $TMPDIR
