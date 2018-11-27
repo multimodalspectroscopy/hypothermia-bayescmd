@@ -20,13 +20,24 @@ param_df = pd.read_csv(op.join(current_file.parents[2],
                        index_col=0)
 
 
-hypothermia_params = ['NADpool', 'k_aut', 'P_an', 'P_ic', 'a_frac_n', 'Xtot_n',
-                      'r_0', 'r_t', 'CMRO2_n', 'pH_on', 'temp_n', 'Q_10', 'phi', 'r_m', 'Dpsi_n', 'r_n']
+hypothermia_params = ['Dpsi_n',
+                      'K_sigma',
+                      'NADpool',
+                      'Q_10',
+                      'Xtot_n',
+                      'cell_death',
+                      'k_aut',
+                      'pH_on',
+                      'r_0']
 
 prior_dict = {}
 for p in hypothermia_params:
     prior_dict[p] = [param_df.loc[p, 'Dist. Type'], [
         param_df.loc[p, 'Min'], param_df.loc[p, 'Max']]]
+
+# Set constant values
+prior_dict['insult_nadir'] = ['constant', 0]
+prior_dict['death_transition'] = ['constant', 0]
 
 
 config_dict = {"model_name": "bp_hypothermia",
