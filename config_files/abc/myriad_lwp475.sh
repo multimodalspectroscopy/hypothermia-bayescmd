@@ -11,7 +11,7 @@ cd $TMPDIR
 export BASEDIR="$HOME/BayesCMD"
 
 DATASET="LWP475"
-DATADIR=`readink -m "../../data/clean_hypothermia/${DATASET}_filtered_formatted.csv"`
+DATADIR=`readlink -m "${HOME}/hypothermia-bayescmd/data/clean_hypothermia/${DATASET}_filtered_formatted.csv"`
 CONFIGFILE=`readlink -m "./bp_hypothermia_config.json"`
 
 
