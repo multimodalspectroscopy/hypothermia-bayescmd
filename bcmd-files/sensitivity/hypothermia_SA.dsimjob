@@ -61,7 +61,7 @@ post: HHb, zero
 post: HbO2, zero
 
 # Set distance measure
-distance: pearson_r_distance
+distance: scaled_pearson_r_distance
 x_variable: temp
 
 # the number of distinct levels (potentially) tested per parameter

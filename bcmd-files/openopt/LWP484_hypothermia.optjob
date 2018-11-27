@@ -38,6 +38,8 @@ param: cell_death, uniform, 0.0000, 1.0000, 0.0000
 param: r_0, uniform, 0.0101, 0.0151, 0.0126
 param: pH_on, uniform, 6.8000, 7.2000, 7.0000
 param: Xtot_n, uniform, 3.5000, 8.0000, 5.4000
+param: insult_nadir, constant, 0
+param: death_transition, constant, 0
 
 
 # job details
