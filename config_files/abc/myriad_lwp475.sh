@@ -8,8 +8,8 @@
 
 module load python3/recommended
 cd $TMPDIR
-export BASEDIR="$HOME/BayesCMD"
-
+export BASEDIR="${HOME}/BayesCMD"
+echo $BASEDIR
 DATASET="LWP475"
 DATADIR=`readlink -m "${HOME}/hypothermia-bayescmd/data/clean_hypothermia/${DATASET}_filtered_formatted.csv"`
 CONFIGFILE=`readlink -m "./bp_hypothermia_config.json"`
