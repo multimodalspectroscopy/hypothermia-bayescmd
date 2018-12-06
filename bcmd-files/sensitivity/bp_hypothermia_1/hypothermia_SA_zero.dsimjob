@@ -61,8 +61,7 @@ post: HHb, zero
 post: HbO2, zero
 
 # Set distance measure
-distance: scaled_pearson_r_distance
-x_variable: temp
+distance: nrmse
 
 # the number of distinct levels (potentially) tested per parameter
 divisions: 20
@@ -83,4 +82,4 @@ path_start: random
 nbatch: 2
 
 # NaN substitute value
-substitute: 1000000
+substitute: 0
