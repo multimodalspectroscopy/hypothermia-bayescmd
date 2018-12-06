@@ -30,7 +30,7 @@ ap.add_argument(
 args = ap.parse_args()
 
 
-DATASET = 'lwp475'
+DATASET = 'lwp481'
 # If parameter files haven't yet been merged, uncomment the next line
 
 # pfile = data_merge_by_batch(args.parent_dir)
