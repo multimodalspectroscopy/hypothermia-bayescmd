@@ -12,13 +12,12 @@ export BASEDIR="${HOME}/BayesCMD"
 
 DATASET="LWP481"
 DATAFILE="${HOME}/hypothermia-bayescmd/data/clean_hypothermia/${DATASET}_filtered_formatted.csv"
-CONFIGFILE="${HOME}/hypothermia-bayescmd/config_files/abc/bp_hypothermia_config.json"
+CONFIGFILE="${HOME}/hypothermia-bayescmd/config_files/abc/bp_hypothermia_1_config.json"
 
-echo -e "Datafile is ${DATFILE}\nConfig file is ${CONFIGFILE}."
+echo -e "Datafile is ${DATAFILE}\nConfig file is ${CONFIGFILE}."
 
 start=`date +%s`
 python3 $BASEDIR/scripts/batch.py 1000 $DATAFILE $CONFIGFILE --workdir $TMPDIR
 echo "Duration: $(($(date +%s)-$start))" > $TMPDIR/$SGE_TASK_ID.timings.txt
 
-tar -zcvf $HOME/Scratch/${DATASET}/batch_$JOB_NAME.$SGE_TASK_ID.tar.gz 
-$TMPDIR
+tar -zcvf $HOME/Scratch/bph1/${DATASET}/batch_$JOB_NAME.$SGE_TASK_ID.tar.gz $TMPDIR
