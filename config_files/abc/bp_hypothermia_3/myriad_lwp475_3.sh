@@ -1,6 +1,6 @@
 #!/bin/bash -l
 #$ -l h_rt=1:30:00
-#$ -N LWP475_cellDeath
+#$ -N LWP475_cellDeath_3
 #$ -wd /home/ucbpjru/Scratch
 # Set up the job array.  In this instance we have requested 1000 tasks
 # numbered 1 to 1000.
