@@ -7,96 +7,76 @@
     ],
     "create_params": false,
     "priors": {
-        "C_v": {
-            "Dist_Type": "uniform",
-            "Min": 0.0376,
-            "Max": 0.0564,
-            "Default": 0.047
-        },
-        "Vol_mit": {
-            "Dist_Type": "uniform",
-            "Min": 0.0536,
-            "Max": 0.0804,
-            "Default": 0.067
-        },
-        "r_n": {
-            "Dist_Type": "uniform",
-            "Min": 0.01496,
-            "Max": 0.02244,
-            "Default": 0.0187
-        },
-        "VArat_n": {
-            "Dist_Type": "uniform",
-            "Min": 2.4,
-            "Max": 3.6,
-            "Default": 3.0
-        },
-        "Q_10": {
-            "Dist_Type": "uniform",
-            "Min": 1.0,
-            "Max": 6.0,
-            "Default": 2.4
-        },
-        "P_vs": {
-            "Dist_Type": "uniform",
-            "Min": 1.2,
-            "Max": 1.8,
-            "Default": 1.5
-        },
-        "a_frac_n": {
-            "Dist_Type": "uniform",
-            "Min": 0.0,
-            "Max": 1.0,
-            "Default": 0.67
-        },
-        "q_diff": {
-            "Dist_Type": "uniform",
-            "Min": 0.0,
-            "Max": 5.0,
-            "Default": 1.0
-        },
-        "G0rat": {
-            "Dist_Type": "uniform",
-            "Min": 4.0,
-            "Max": 6.0,
-            "Default": 5.0
-        },
-        "CBFn": {
-            "Dist_Type": "uniform",
-            "Min": 0.0064,
-            "Max": 0.0096,
-            "Default": 0.008
-        },
-        "cell_death": {
-            "Dist_Type": "uniform",
-            "Min": 0.0,
-            "Max": 1.0,
-            "Default": 0.0
-        },
-        "cytox_tot_tis": {
-            "Dist_Type": "uniform",
-            "Min": 0.001,
-            "Max": 0.006999999999999999,
-            "Default": 0.0022
-        },
-        "G_VAratn": {
-            "Dist_Type": "uniform",
-            "Min": 3.2,
-            "Max": 4.8,
-            "Default": 4.0
-        },
-        "Xtot_n": {
-            "Dist_Type": "uniform",
-            "Min": 3.5,
-            "Max": 8.0,
-            "Default": 5.4
-        },
-        "blood_frac": {
-            "Dist_Type": "uniform",
-            "Min": 0.026000000000000002,
-            "Max": 0.039,
-            "Default": 0.0325
-        }
+        "pH_on": [
+            "uniform",
+            [
+                6.8,
+                7.2
+            ]
+        ],
+        "q_diff": [
+            "uniform",
+            [
+                0.0,
+                5.0
+            ]
+        ],
+        "K_sigma": [
+            "uniform",
+            [
+                8.0,
+                12.0
+            ]
+        ],
+        "a_frac_n": [
+            "uniform",
+            [
+                0.0,
+                1.0
+            ]
+        ],
+        "cell_death": [
+            "uniform",
+            [
+                0.0,
+                1.0
+            ]
+        ],
+        "NADpool": [
+            "uniform",
+            [
+                1.5,
+                4.5
+            ]
+        ],
+        "Xtot_n": [
+            "uniform",
+            [
+                3.5,
+                8.0
+            ]
+        ],
+        "CMRO2_n": [
+            "uniform",
+            [
+                0.016,
+                0.024
+            ]
+        ],
+        "Q_10": [
+            "uniform",
+            [
+                1.0,
+                6.0
+            ]
+        ],
+        "r_n": [
+            "uniform",
+            [
+                0.01496,
+                0.02244
+            ]
+        ]
     },
     "targets": [
         "CCO",
