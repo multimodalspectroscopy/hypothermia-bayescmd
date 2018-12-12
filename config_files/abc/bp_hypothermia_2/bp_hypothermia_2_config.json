@@ -7,84 +7,97 @@
     ],
     "create_params": false,
     "priors": {
-        "cell_death": {
-            "Dist_Type": "uniform",
-            "Min": 0.0,
-            "Max": 1.0,
-            "Default": 0.0
-        },
-        "Xtot_n": {
-            "Dist_Type": "uniform",
-            "Min": 3.5,
-            "Max": 8.0,
-            "Default": 5.4
-        },
-        "phi": {
-            "Dist_Type": "uniform",
-            "Min": 0.0288,
-            "Max": 0.0432,
-            "Default": 0.036000000000000004
-        },
-        "Q_10_met": {
-            "Dist_Type": "uniform",
-            "Min": 1.0,
-            "Max": 6.0,
-            "Default": 2.4
-        },
-        "pH_on": {
-            "Dist_Type": "uniform",
-            "Min": 6.8,
-            "Max": 7.2,
-            "Default": 7.0
-        },
-        "NADpool": {
-            "Dist_Type": "uniform",
-            "Min": 1.5,
-            "Max": 4.5,
-            "Default": 3.0
-        },
-        "k_aut": {
-            "Dist_Type": "uniform",
-            "Min": 0.0,
-            "Max": 1.0,
-            "Default": 1.0
-        },
-        "r_n": {
-            "Dist_Type": "uniform",
-            "Min": 0.01496,
-            "Max": 0.02244,
-            "Default": 0.0187
-        },
-        "r_0": {
-            "Dist_Type": "uniform",
-            "Min": 0.01008,
-            "Max": 0.015119999999999998,
-            "Default": 0.0126
-        },
-        "O2_n": {
-            "Dist_Type": "uniform",
-            "Min": 0.0192,
-            "Max": 0.0288,
-            "Default": 0.024
-        },
-        "K_sigma": {
-            "Dist_Type": "uniform",
-            "Min": 8.0,
-            "Max": 12.0,
-            "Default": 10.0
-        },
-        "Q_10_haemo": {
-            "Dist_Type": "uniform",
-            "Min": 1.0,
-            "Max": 6.0,
-            "Default": 2.4
-        },
-        "r_t": {
-            "Dist_Type": "uniform",
-            "Min": 0.0144,
-            "Max": 0.0216,
-            "Default": 0.018000000000000002
-        }
+        "cell_death": [
+            "uniform",
+            [
+                0.0,
+                1.0
+            ]
+        ],
+        "k_aut": [
+            "uniform",
+            [
+                0.0,
+                1.0
+            ]
+        ],
+        "Q_10_met": [
+            "uniform",
+            [
+                1.0,
+                6.0
+            ]
+        ],
+        "NADpool": [
+            "uniform",
+            [
+                1.5,
+                4.5
+            ]
+        ],
+        "Xtot_n": [
+            "uniform",
+            [
+                3.5,
+                8.0
+            ]
+        ],
+        "r_0": [
+            "uniform",
+            [
+                0.01008,
+                0.015119999999999998
+            ]
+        ],
+        "K_sigma": [
+            "uniform",
+            [
+                8.0,
+                12.0
+            ]
+        ],
+        "r_n": [
+            "uniform",
+            [
+                0.01496,
+                0.02244
+            ]
+        ],
+        "phi": [
+            "uniform",
+            [
+                0.0288,
+                0.0432
+            ]
+        ],
+        "O2_n": [
+            "uniform",
+            [
+                0.0192,
+                0.0288
+            ]
+        ],
+        "pH_on": [
+            "uniform",
+            [
+                6.8,
+                7.2
+            ]
+        ],
+        "r_t": [
+            "uniform",
+            [
+                0.0144,
+                0.0216
+            ]
+        ],
+        "Q_10_haemo": [
+            "uniform",
+            [
+                1.0,
+                6.0
+            ]
+        ]
     },
     "targets": [
         "CCO",
