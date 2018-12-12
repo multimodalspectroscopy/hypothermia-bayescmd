@@ -1,8 +1,8 @@
 #!/bin/bash
 
-for MODEL in `echo */`; 
+for MODEL in {1..2}; 
 do 
-    for DATA in `echo ${MODEL}*.sh`; 
+    for DATA in `echo "./bp_hypothermia_${MODEL}/"*.sh`; 
     do qsub "./${DATA}"; 
     done; 
 done
