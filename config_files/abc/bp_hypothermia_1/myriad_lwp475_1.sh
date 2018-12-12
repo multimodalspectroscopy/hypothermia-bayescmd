@@ -14,7 +14,7 @@ export BASEDIR="${HOME}/BayesCMD"
 
 DATASET="LWP475"
 DATAFILE="${HOME}/hypothermia-bayescmd/data/clean_hypothermia/${DATASET}_filtered_formatted.csv"
-CONFIGFILE="${HOME}/hypothermia-bayescmd/config_files/abc/bp_hypothermnia_1/bp_hypothermia_1_config.json"
+CONFIGFILE="${HOME}/hypothermia-bayescmd/config_files/abc/bp_hypothermia_1/bp_hypothermia_1_config.json"
 
 echo "Datafile is ${DATAFILE}\nConfig file is ${CONFIGFILE}."
 
