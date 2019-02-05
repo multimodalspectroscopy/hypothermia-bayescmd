@@ -7,13 +7,6 @@
     ],
     "create_params": false,
     "priors": {
-        "cell_death": [
-            "uniform",
-            [
-                0.0,
-                1.0
-            ]
-        ],
         "k_aut": [
             "uniform",
             [

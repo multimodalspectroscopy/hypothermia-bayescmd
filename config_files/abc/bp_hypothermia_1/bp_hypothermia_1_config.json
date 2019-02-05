@@ -70,13 +70,6 @@
                 7.2
             ]
         ],
-        "cell_death": [
-            "uniform",
-            [
-                0.0,
-                1.0
-            ]
-        ],
         "r_t": [
             "uniform",
             [
