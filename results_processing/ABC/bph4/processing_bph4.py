@@ -33,7 +33,7 @@ with open(args.conf, 'r') as conf_f:
 
 params = conf['priors']
 current_file = Path(os.path.abspath(__file__))
-MODEL_VERSION = "bph2"
+MODEL_VERSION = "bph4"
 DATASETS = ['LWP475', 'LWP479', 'LWP481', 'LWP484']
 for DATASET in DATASETS[::-1]:
     # If parameter files haven't yet been merged, uncomment the next line
@@ -124,8 +124,9 @@ for DATASET in DATASETS[::-1]:
                     os.path.join(figPath, 'PLOS_{}_{}_{}_TS.png'
                                  .format(DATASET, str(lim).replace('.', '_'), d)),
                     dpi=100)
-            except AttributeError:
+            except AttributeError as e:
                 print("Failed to get TS on {}-{}-{}".format(MODEL_VERSION, DATASET, lim))
+                print(e)
             plt.close('all')
 
 # TODO: Fix issue with plot formatting, cutting off axes etc

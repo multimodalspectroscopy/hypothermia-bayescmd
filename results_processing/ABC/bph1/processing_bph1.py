@@ -34,7 +34,8 @@ with open(args.conf, 'r') as conf_f:
 params = conf['priors']
 current_file = Path(os.path.abspath(__file__))
 MODEL_VERSION = "bph1"
-for DATASET in ['LWP475', 'LWP479', 'LWP481', 'LWP484']:
+DATASETS = ['LWP475', 'LWP479', 'LWP481', 'LWP484']
+for DATASET in DATASETS[::-1]:
     # If parameter files haven't yet been merged, uncomment the next line
 
     # pfile = data_merge_by_batch(args.parent_dir)
@@ -77,7 +78,7 @@ for DATASET in ['LWP475', 'LWP479', 'LWP481', 'LWP484']:
     # print(results.columns)
 
     # Set accepted limit, lim
-    lims = [1000, 5000, 10000]
+    lims = [1000]  # , 5000, 10000]
     distances = []
     for dist_measure in ['NRMSE']:
         distances.extend(['{}_{}'.format(t, dist_measure)
