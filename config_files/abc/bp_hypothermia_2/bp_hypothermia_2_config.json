@@ -7,13 +7,6 @@
     ],
     "create_params": false,
     "priors": {
-        "k_aut": [
-            "uniform",
-            [
-                0.0,
-                1.0
-            ]
-        ],
         "Q_10_met": [
             "uniform",
             [
@@ -21,18 +14,18 @@
                 6.0
             ]
         ],
-        "NADpool": [
-            "uniform",
-            [
-                1.5,
-                4.5
-            ]
-        ],
         "Xtot_n": [
             "uniform",
             [
                 3.5,
                 8.0
+            ]
+        ],
+        "r_n": [
+            "uniform",
+            [
+                0.01496,
+                0.02244
             ]
         ],
         "r_0": [
@@ -49,11 +42,11 @@
                 12.0
             ]
         ],
-        "r_n": [
+        "pH_mn": [
             "uniform",
             [
-                0.01496,
-                0.02244
+                7.2,
+                7.6
             ]
         ],
         "phi": [
@@ -63,46 +56,42 @@
                 0.0432
             ]
         ],
-        "O2_n": [
-            "uniform",
-            [
-                0.0192,
-                0.0288
-            ]
-        ],
-        "pH_on": [
-            "uniform",
-            [
-                6.8,
-                7.2
-            ]
-        ],
-        "r_t": [
-            "uniform",
-            [
-                0.0144,
-                0.0216
-            ]
-        ],
         "Q_10_haemo": [
             "uniform",
             [
                 1.0,
                 6.0
             ]
+        ],
+        "a_frac_n": [
+            "uniform",
+            [
+                0.0,
+                1.0
+            ]
+        ],
+        "_L0n": [
+            "uniform",
+            [
+                0.1,
+                5.0
+            ]
+        ],
+        "NADpool": [
+            "uniform",
+            [
+                1.5,
+                4.5
+            ]
         ]
     },
     "targets": [
         "CCO",
-        "HbT",
-        "Hbdiff",
         "HbO2",
         "HHb"
     ],
     "zero_flag": {
         "CCO": true,
-        "Hbdiff": true,
-        "HbT": true,
         "HbO2": true,
         "HHb": true
     },
