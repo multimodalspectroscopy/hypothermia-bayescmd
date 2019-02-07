@@ -1,3 +1,4 @@
 # Keep directory empty on remote 
 *
 !.gitignore
+!clean_hypothermia/*_filtered_formatted.csv
