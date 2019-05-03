@@ -1,5 +1,5 @@
 {
-    "model_name": "brainpiglet2_1",
+    "model_name": "brainpiglet2-1",
     "inputs": [
         "SaO2sup",
         "P_a",
