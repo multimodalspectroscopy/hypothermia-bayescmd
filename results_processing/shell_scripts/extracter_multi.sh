@@ -1,5 +1,5 @@
 #!/bin/bash
-declare -a MODELS=( "bph1" "bph2" );
+declare -a MODELS=( "bph1" "bph2" "bph4" );
 declare -a DATASETS=( "LWP475" "LWP479" "LWP481" "LWP484" );
 
 for MODEL_VERSION in ${MODELS[@]};

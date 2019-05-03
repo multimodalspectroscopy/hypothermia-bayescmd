@@ -1,6 +1,6 @@
 #!/bin/bash
 MODEL_VERSION="bph1"
-declare -a DATASETS=( "LWP479" "LWP481" "LWP484" );
+declare -a DATASETS=( "LWP475" "LWP479" "LWP481" "LWP484" );
 
 for D in ${DATASETS[@]};
 do
