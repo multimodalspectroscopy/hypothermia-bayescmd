@@ -1,0 +1,114 @@
+{
+    "model_name": "brainpiglet2_1",
+    "inputs": [
+        "SaO2sup",
+        "P_a",
+        "temp"
+    ],
+    "create_params": false,
+    "priors": {
+        "NADpool": [
+            "uniform",
+            [
+                1.5,
+                4.5
+            ]
+        ],
+        "r_0": [
+            "uniform",
+            [
+                0.01008,
+                0.015112
+            ]
+        ],
+        "r_t": [
+            "uniform",
+            [
+                0.0144,
+                0.0216
+            ]
+        ],
+        "n_m": [
+            "uniform",
+            [
+                1.464,
+                2.196
+            ]
+        ],
+        "Vol_mit": [
+            "uniform",
+            [
+                0.0536,
+                0.0804
+            ]
+        ],
+        "phi": [
+            "uniform",
+            [
+                0.0288,
+                0.0432
+            ]
+        ],
+        "P_ic": [
+            "uniform",
+            [
+                3.6,
+                5.4
+            ]
+        ],
+        "r_m": [
+            "uniform",
+            [
+                0.0216,
+                0.0324
+            ]
+        ],
+        "R_autc": [
+            "uniform",
+            [
+                0.0,
+                10.0
+            ]
+        ],
+        "rocc": [
+            "uniform",
+            [
+                0.0,
+                1.0
+            ]
+        ],
+        "K_sigma": [
+            "uniform",
+            [
+                8.0,
+                12.0
+            ]
+        ],
+        "k_lk2": [
+            "uniform",
+            [
+                0.0304,
+                0.0456
+            ]
+        ],
+        "k_aut": [
+            "uniform",
+            [
+                0.0,
+                1.0
+            ]
+        ]
+    },
+    "targets": [
+        "CCO",
+        "HbO2",
+        "HHb"
+    ],
+    "zero_flag": {
+        "CCO": true,
+        "HbO2": true,
+        "HHb": true
+    },
+    "batch_debug": false,
+    "store_simulations": false
+}
