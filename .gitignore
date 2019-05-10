@@ -106,3 +106,5 @@ venv.bak/
 
 # VS Code stuff
 .vscode/
+results_processing/gcloud/hypothermia-auth.json
+results_processing/gcloud/.env
