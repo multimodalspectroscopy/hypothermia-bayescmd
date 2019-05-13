@@ -18,6 +18,6 @@ echo "Datafile is ${DATAFILE}\nConfig file is ${CONFIGFILE}."
 
 # python "${HOME}/BayesCMD/scripts/single_run/run_model.py" --workdir $TMPDIR ${DATAFILE} ${CONFIGFILE}
 
-build/bp_hypothermia.model -i ${HOME}/hypothermia-bayescmd/data/ABC/debugging/bp_hypothermia/100519T1656/bp_hypothermia.input -o ${HOME}hypothermia-bayescmd/data/ABC/debugging/bp_hypothermia/debug_coarse.tsv -d ${HOME}/data/ABC/debugging/bp_hypothermia/debug_fine.tsv
+build/bp_hypothermia.model -i ${HOME}/hypothermia-bayescmd/data/ABC/debugging/bp_hypothermia/100519T1656/bp_hypothermia.input -o ${TMPDIR}/debug_coarse.tsv -d ${TMPDIR}/debug_fine.tsv
 
 tar -zcvf $HOME/Scratch/debug/$JOB_NAME.tar.gz $TMPDIR
