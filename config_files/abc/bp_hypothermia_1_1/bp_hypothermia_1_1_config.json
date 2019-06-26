@@ -1,0 +1,114 @@
+{
+    "model_name": "bp_hypothermia",
+    "inputs": [
+        "SaO2sup",
+        "P_a",
+        "temp"
+    ],
+    "create_params": false,
+    "priors": {
+        "CBFn": [
+            "uniform",
+            [
+                0.0064,
+                0.0096
+            ]
+        ],
+        "K_sigma": [
+            "uniform",
+            [
+                8.0,
+                12.0
+            ]
+        ],
+        "phi": [
+            "uniform",
+            [
+                0.0288,
+                0.0432
+            ]
+        ],
+        "n_h": [
+            "uniform",
+            [
+                2.0,
+                3.0
+            ]
+        ],
+        "k_aut": [
+            "uniform",
+            [
+                0.0,
+                1.0
+            ]
+        ],
+        "R_auto": [
+            "uniform",
+            [
+                0.0,
+                10.0
+            ]
+        ],
+        "Xtot_n": [
+            "uniform",
+            [
+                3.5,
+                8.0
+            ]
+        ],
+        "Q_10": [
+            "uniform",
+            [
+                0.001,
+                3.0
+            ]
+        ],
+        "NADpool": [
+            "uniform",
+            [
+                1.5,
+                4.5
+            ]
+        ],
+        "O2_n": [
+            "uniform",
+            [
+                0.0192,
+                0.0288
+            ]
+        ],
+        "r_n": [
+            "uniform",
+            [
+                0.01496,
+                0.02244
+            ]
+        ],
+        "r_0": [
+            "uniform",
+            [
+                0.01008,
+                0.015119999999999998
+            ]
+        ],
+        "r_t": [
+            "uniform",
+            [
+                0.0144,
+                0.0216
+            ]
+        ]
+    },
+    "targets": [
+        "CCO",
+        "HbO2",
+        "HHb"
+    ],
+    "zero_flag": {
+        "CCO": true,
+        "HbO2": true,
+        "HHb": true
+    },
+    "batch_debug": false,
+    "store_simulations": false
+}
