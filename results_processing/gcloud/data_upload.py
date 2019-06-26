@@ -2,8 +2,8 @@ from google.cloud import bigquery
 import itertools
 
 
-DATASETS = ['LWP481']
-MODELS = ['bph1', 'bph2']
+DATASETS = ['LWP475', 'LWP479', 'LWP481', 'LWP484']
+MODELS = ['bph0']
 LOCATION = 'EU'
 
 
@@ -28,7 +28,9 @@ def dataset_exists(client, dataset_reference):
         return False
 
 
-for combo in list(itertools.product(DATASETS, MODELS)):
+combinations = list(itertools.product(DATASETS, MODELS))
+
+for combo in combinations:
 
     print("Working on {0} - {1}".format(*combo))
     # Construct a BigQuery client object.
@@ -56,7 +58,7 @@ for combo in list(itertools.product(DATASETS, MODELS)):
             client.project, dataset.dataset_id))
 
     dataset_ref = client.dataset(dataset_id)
-    table_ref = dataset_ref.table(table_id)
+    table_ref = dataset_ref.table(table_id.replace('.', '_'))
 
     job_config = bigquery.LoadJobConfig()
     job_config.source_format = bigquery.SourceFormat.CSV
