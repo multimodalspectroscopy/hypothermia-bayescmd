@@ -68,7 +68,7 @@ outputs = ["CMRO2", "CCO", "HbT", "CBF", "Hbdiff",
 # For debugging
 # outputs.extend(["k_MAshut", "k_nMAshut", "Q_temp", "_ADP", "_ATP"])
 
-q10_range = np.arange(1, 5.1, 0.1)
+q10_range = np.arange(0.1, 5.1, 0.1)
 qdiff_range = np.arange(0.1, 1.0, 0.02)
 q_range = list(itertools.product(q10_range, qdiff_range))
 pa_range = [30, 40, 50, 60, 70]

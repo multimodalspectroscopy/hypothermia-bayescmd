@@ -1,5 +1,6 @@
 """ Generate various steady state data sets."""
 from bayescmd.steady_state import RunSteadyState
+import numpy as np
 import os
 import distutils
 import json
@@ -64,7 +65,7 @@ for direction in ["up", "down"]:
 # For debugging
 # outputs.extend(["k_MAshut", "k_nMAshut", "Q_temp", "_ADP", "_ATP"])
 
-q10_range = [1, 2.5, 3.5]
+q10_range = np.arange(0.1, 5.1, 0.1)
 pa_range = [30, 40, 50, 60, 70]
 sao2_range = [0.8, 0.9, 1.0]
 
@@ -101,56 +102,56 @@ for q in q10_range:
 
 with open(os.path.join(workdir, "q_range_runs_{}.json".format(direction)), 'w') as f:
     json.dump(data, f)
-rcParams['axes.titlepad'] = 12
+# rcParams['axes.titlepad'] = 12
 
-for o in outputs:
-    if direction == "both":
-        fig, ax = plt.subplots(nrows=1, ncols=len(
-            q10_range), sharey=True, figsize=(9, 4))
-        for idx, q in enumerate(q10_range):
-            ax[idx].plot(data[q]["temp"][:len(data[q][o]) // 2 + 1],
-                         data[q][o][:len(data[q][o]) // 2 + 1],
-                         label="Up")
-            ax[idx].plot(data[q]["temp"][len(data[q][o]) // 2:],
-                         data[q][o][len(data[q][o]) // 2:],
-                         label="Down")
+# for o in outputs:
+#     if direction == "both":
+#         fig, ax = plt.subplots(nrows=1, ncols=len(
+#             q10_range), sharey=True, figsize=(9, 4))
+#         for idx, q in enumerate(q10_range):
+#             ax[idx].plot(data[q]["temp"][:len(data[q][o]) // 2 + 1],
+#                          data[q][o][:len(data[q][o]) // 2 + 1],
+#                          label="Warming")
+#             ax[idx].plot(data[q]["temp"][len(data[q][o]) // 2:],
+#                          data[q][o][len(data[q][o]) // 2:],
+#                          label="Cooling")
 
-            ax[idx].set_title("Q10: {}".format(q))
-            ax[idx].set_ylabel(o)
-            ax[idx].set_xlabel("Temp (C)")
-        ax[idx].legend()
-        plt.tight_layout()
+#             ax[idx].set_title("$Q_{10}$: %s"%(q))
+#             ax[idx].set_ylabel(o)
+#             ax[idx].set_xlabel("Temp ($^{\circ}$C)")
+#         ax[idx].legend()
+#         plt.tight_layout()
 
-        path = os.path.join(workdir, "Figures")
+#         path = os.path.join(workdir, "Figures")
 
-        distutils.dir_util.mkpath(path)
-        fig.savefig(os.path.join(path, "{}_both.png".format(o)),
-                    bbox_inches="tight")
-        plt.close()
+#         distutils.dir_util.mkpath(path)
+#         fig.savefig(os.path.join(path, "{}_both.png".format(o)),
+#                     bbox_inches="tight")
+#         plt.close()
 
-    else:
-        fig, ax = plt.subplots(ncols=1, nrows=len(
-            q10_range), sharey=True, figsize=(5, 10))
-        for idx, q in enumerate(q10_range):
-            # if direction == "both":
-            #     ax.plot(output["temp"][:len(output[o]) // 2 + 1],
-            #             output[o][:len(output[o]) // 2 + 1],
-            #             label="Up")
-            #     ax.plot(output["temp"][len(output[o]) // 2:],
-            #             output[o][len(output[o]) // 2:],
-            #             label="Down")
-            # else:
-            ax[idx].plot(data[q]["temp"],
-                         data[q][o], label=q, color=cbar[idx])
-        ax[idx].set_title(
-            "{} response to Temperature for different Q10 values".format(o))
-        ax[idx].set_ylabel(o)
-        ax[idx].set_xlabel("Temp (C)")
-        ax[idx].legend()
+#     else:
+#         fig, ax = plt.subplots(ncols=1, nrows=len(
+#             q10_range), sharey=True, figsize=(5, 10))
+#         for idx, q in enumerate(q10_range):
+#             # if direction == "both":
+#             #     ax.plot(output["temp"][:len(output[o]) // 2 + 1],
+#             #             output[o][:len(output[o]) // 2 + 1],
+#             #             label="Up")
+#             #     ax.plot(output["temp"][len(output[o]) // 2:],
+#             #             output[o][len(output[o]) // 2:],
+#             #             label="Down")
+#             # else:
+#             ax[idx].plot(data[q]["temp"],
+#                          data[q][o], label=q, color=cbar[idx])
+#         ax[idx].set_title(
+#             "{} response to Temperature for different Q10 values".format(o))
+#         ax[idx].set_ylabel(o)
+#         ax[idx].set_xlabel("Temp (C)")
+#         ax[idx].legend()
 
-        path = os.path.join(workdir, "Figures")
+#         path = os.path.join(workdir, "Figures")
 
-        distutils.dir_util.mkpath(path)
-        fig.savefig(os.path.join(path, "{}.png".format(o)),
-                    bbox_inches="tight")
-        plt.close()
+#         distutils.dir_util.mkpath(path)
+#         fig.savefig(os.path.join(path, "{}.png".format(o)),
+#                     bbox_inches="tight")
+#         plt.close()

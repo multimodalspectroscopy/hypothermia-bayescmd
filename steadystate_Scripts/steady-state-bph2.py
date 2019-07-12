@@ -65,8 +65,8 @@ MODEL_NAME = "bp_hypothermia_2"
 # For debugging
 # outputs.extend(["k_MAshut", "k_nMAshut", "Q_temp", "_ADP", "_ATP"])
 
-q10_met_range = np.arange(1, 5.1, 0.1)
-q10_haemo_range = np.arange(1, 5.1, 0.1)
+q10_met_range = np.arange(0.1, 5.1, 0.1)
+q10_haemo_range = np.arange(0.1, 5.1, 0.1)
 q_range = list(itertools.product(q10_met_range, q10_haemo_range))
 pa_range = [30, 40, 50, 60, 70]
 sao2_range = [0.8, 0.9, 1.0]
